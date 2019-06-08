@@ -1,28 +1,18 @@
-// Parte 1 
-var nombre = prompt()
-console.log('Hola bienvenido: ' + nombre)
+var tope = 10
+/**var cont = 1
 
+while (cont < tope) {
+  cont = cont + 1
+  console.log(cont);
+}
 
-// Parte 2 
+do {
+  console.log(cont);
+  cont = cont + 4
+  //cont += 1 (recomendada)
+  //cont ++
+} while (cont < tope)*/
 
-var pi = 3
-var numeroASumar = prompt()
-numeroASumar = parseFloat(numeroASumar)
-console.log(pi + numeroASumar)
-
-
-// Parte 3
-
-var numeroARestar = prompt()
-numeroARestar = parseFloat(numeroARestar)
-var numeroOriginal = 15
-console.log(numeroOriginal - numeroARestar)
-
-// Parte 4
-
-var numeroUno = prompt()
-var numeroDos = prompt()
-numeroUno = parseFloat(numeroUno)
-numeroDos = parseFloat(numeroDos)
-console.log(numeroUno + numeroDos)
-
+for (var i = 0; i < tope; i++) {
+  console.log(i)
+}
