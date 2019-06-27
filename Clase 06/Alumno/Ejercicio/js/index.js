@@ -1,7 +1,7 @@
 function borrarNumero(indice, listaNumeros) {
-  if (indice > listaNumeros.length()) {
-    var arr1 = listaNumeros.slice(0, indice)
-    var arr2 = listaNumeros.slice(indice++, listaNumeros.length())
+  if (indice < listaNumeros.length) {
+    var arr1 = listaNumeros.slice(0, indice - 1)
+    var arr2 = listaNumeros.slice(indice++, listaNumeros.length)
     return arr1.concat(arr2)
   }
   return false

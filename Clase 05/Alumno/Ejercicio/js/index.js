@@ -22,4 +22,15 @@ console.log(newCar.getCarName());
 console.log(newCar.getId())
 console.log(newCar.__proto__)
 
+var newCar1 = new Car('Audi TT', 'Audi', 2017);
+
+console.log(newCar1.getCarName());
+console.log(newCar1.getId())
+console.log(newCar1.__proto__)
+
+var newCar2 = new Car('Gran turismo', 'Maserati', 2018);
+
+console.log(newCar2.getCarName());
+console.log(newCar2.getId())
+console.log(newCar2.__proto__)
 

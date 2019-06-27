@@ -1,43 +1,56 @@
-var auto1 = {
-  puertas: 4,
-  airbag: false,
-  color: 'rojo',
-  marca: 'VW',
-  modelos: 1998,
-  km: 10000,
+function getRandomId() {
+  return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 }
 
-var auto2 = {
-  puertas: 5,
-  airbag: true,
-  color: 'negro',
-  marca: 'bmw',
-  modelos: 2015,
-  km: 0,
-}
-
-// siempre empiezan con mayuscula
-// function Auto(puertas, airbag, color, marca = 'vw') PARA ASIGNAR UNA VALR DEFAULT SI ESE NO ES COMPLETADO {
-function Auto(puertas, airbag, color, marca) {
-  this.puertas = puertas;
-  this.airbag = airbag;
-  this.color = color;
-  this.marca = marca;
-  this.encendido = false;
-  this.encender = function () {
-    this.encendido = true
-  }
-  this.apagar = function () {
-    this.encendido = false
+function Student(firstName, lastName, dni, email) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dni = dni;
+  this.email = email;
+  var id = getRandomId()
+  this.getId = function () {
+    return id
   }
 }
 
-console.log(auto1)
-var autoNuevo = new Auto(4, true, 'gris', 'Chery')
-autoNuevo.puertas = 10
-autoNuevo.encendido = true
-console.log(autoNuevo)
-autoNuevo.encender()
-console.log(autoNuevo)
-autoNuevo.apagar()
-console.log(autoNuevo)
+Student.prototype.getFullName = function () {
+  return this.firstName + ' ' + this.lastName;
+}
+
+var students = [
+  {
+    firstName: 'Juan',
+    lastName: 'Pérez',
+    dni: 45678987,
+    email: 'juan@gmail.com'
+  },
+  {
+    firstName: 'Ana',
+    lastName: 'Fernandez',
+    dni: 45678989,
+    email: 'ana@gmail.com'
+  },
+  {
+    firstName: 'Pedro',
+    lastName: 'Mármol',
+    dni: 45678956,
+    email: 'pedro@gmail.com'
+  }
+]
+
+/** function studentsList(list) {
+  var len = list.length
+  for (i = 0; i < len; i++) {
+    var newStudent = new Student(list)
+  }
+}
+
+console.log(studentsList(students))*/
+
+var newStudent = new Student(students[0])
+console.log(newStudent.getId())
+console.log(newStudent.getFullName())
+console.log(newStudent.lastName)
+console.log(newStudent.firstName)
+console.log(newStudent.dni)
+console.log(newStudent.email)
