@@ -17,6 +17,21 @@ Student.prototype.getFullName = function () {
   return this.firstName + ' ' + this.lastName;
 }
 
+/** function studentsList(list) {
+  var len = list.length
+  for (i = 0; i < len; i++) {
+    var newStudent = new Student(list)
+  }
+}
+
+console.log(studentsList(students))*/
+
+function studentsList(list) {
+  for (var i = 0; i < list.length; i++) {
+    var newStudent = new Student (list[i])
+  }
+}
+
 var students = [
   {
     firstName: 'Juan',
@@ -38,19 +53,5 @@ var students = [
   }
 ]
 
-/** function studentsList(list) {
-  var len = list.length
-  for (i = 0; i < len; i++) {
-    var newStudent = new Student(list)
-  }
-}
+studentsList(students)
 
-console.log(studentsList(students))*/
-
-var newStudent = new Student(students[0])
-console.log(newStudent.getId())
-console.log(newStudent.getFullName())
-console.log(newStudent.lastName)
-console.log(newStudent.firstName)
-console.log(newStudent.dni)
-console.log(newStudent.email)

@@ -19,3 +19,4 @@ function getLocalList(key) {
 
 localStorage.setItem('Numeros', "[1,2,3]")
 console.log(getLocalList('Numeros'))
+console.log(getLocalList('Pepito'))
