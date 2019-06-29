@@ -1,3 +1,10 @@
+var student = {
+  firstName: 'Juan',
+  lastName: 'Peréz',
+  dni: 22999333,
+  email: 'juan@gmail.com'
+}
+
 function createStudentNode(student) {
   var li = document.createElement('li')
   li.className = 'list-group-item'
@@ -11,16 +18,13 @@ function createStudentNode(student) {
   li.appendChild(h1)
   li.appendChild(h3)
   h3.appendChild(p)
+  return li
 }
 
+var ul = document.getElementById('ul-id')
+ul.appendChild(createStudentNode(student))
 //var studentNode = createStudentNode(newStudent)
 
-var students = {
-  firstName: 'Juan',
-  lastName: 'Peréz',
-  dni: 22999333,
-  email: 'juan@gmail.com'
-}
 
 console.log(createStudentNode(students))
 

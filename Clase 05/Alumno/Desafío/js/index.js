@@ -27,9 +27,12 @@ Student.prototype.getFullName = function () {
 console.log(studentsList(students))*/
 
 function studentsList(list) {
+  var listWithObjects = []
   for (var i = 0; i < list.length; i++) {
-    var newStudent = new Student (list[i])
+    var newStudent = new Student(list[i])
+    listWithObjects.push(newStudent)
   }
+  return listWithObjects
 }
 
 var students = [
@@ -53,5 +56,5 @@ var students = [
   }
 ]
 
-studentsList(students)
+console.log(studentsList(students))
 
