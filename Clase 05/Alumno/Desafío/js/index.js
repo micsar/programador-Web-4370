@@ -57,4 +57,5 @@ var students = [
 ]
 
 console.log(studentsList(students))
+console.log(newStudent.firstName)
 
