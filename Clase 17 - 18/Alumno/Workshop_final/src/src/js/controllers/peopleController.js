@@ -1,6 +1,5 @@
 function contactController() {
   $('#root').load('./partials/contact.html', function () {
-
     var firstName = $('#firstName')
     var email = $('#email')
     var comments = $('#comments')
@@ -62,11 +61,6 @@ function contactController() {
   })
 
 }
-console.log('Se cargo la contacts')
 
 
-
-
-
-
-export default contactController
+export default peopleController

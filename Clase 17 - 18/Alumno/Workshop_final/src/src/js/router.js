@@ -5,7 +5,6 @@ import peopleController from './controllers/peopleController'
 import savedController from './controllers/savedController'
 import { searchController } from './controllers/searchController'
 
-
 homeController()
 searchController()
 
@@ -18,7 +17,6 @@ function router() {
   crossroads.addRoute('#/local-storage', savedController)
 
   crossroads.addRoute('#/people', peopleController)
-
   // En cada cambio del # va a verificar las rutas
   $(window).on('hashchange', function () {
     crossroads.parse(window.location.hash)
